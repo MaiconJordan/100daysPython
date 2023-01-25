@@ -1,6 +1,6 @@
 #numero impar ou par
 
-num = int(input('Digite um numero e direi se ele é IMPAR ou PAR'))
+num = int(input('Digite um numero e direi se ele é IMPAR ou PAR\n'))
 
 resultado = num % 2
 

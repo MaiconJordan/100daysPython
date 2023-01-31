@@ -1,6 +1,6 @@
 #tabuada completa
 
-n = int(input('Digite um numerp'))
+n = int(input('Digite um numero: '))
 
 i = 1
 while i < 11:    

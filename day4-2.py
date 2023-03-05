@@ -12,8 +12,7 @@ linha_escolinha = input("Veja o quadro acima, digite qual bola você quer acerta
 coluna = int(linha_escolinha[0])
 linha = int(linha_escolinha[1])
 
-linha_s = quadro[linha - 1]
-linha_s[coluna - 1] = "X"
+quadro[linha - 1][coluna - 1] = "X"
 
 
 print("  1     2      3")

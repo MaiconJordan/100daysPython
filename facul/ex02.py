@@ -7,3 +7,4 @@ total_km = km * 0.15
 total = total_dia + total_km
 
 print(f"O valor total do aluguel é de: {total}")
+print("Commit sem sentido")

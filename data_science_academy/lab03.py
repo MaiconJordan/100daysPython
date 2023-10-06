@@ -68,5 +68,9 @@ Ela 'tá na minha mão pique Nintendo Switch
 
 match = re.findall("a", texto)
 count = len(match)
-
 print(f"A palavra 'a' aparece {count} vezes no texto")
+
+
+padrao = r'\bluigi\b'
+resultado = len(re.findall(padrao, texto, re.IGNORECASE))
+print(resultado)

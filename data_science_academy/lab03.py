@@ -71,6 +71,6 @@ count = len(match)
 print(f"A palavra 'a' aparece {count} vezes no texto")
 
 
-padrao = r'\bluigi\b'
-resultado = len(re.findall(padrao, texto, re.IGNORECASE))
+
+resultado = len(re.findall(r'\bluigi\b', texto, re.IGNORECASE))
 print(resultado)

@@ -1,3 +1,5 @@
+
+
 print("\nACERTE TODAS AS UF(ESTADOS) DO BRASIL\n")
 
 acertos = []

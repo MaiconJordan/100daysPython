@@ -1,2 +1,4 @@
-for x in range(1, 3):
-    print(x)
+n = 10
+n -= 1
+
+print(n)

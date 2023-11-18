@@ -1,6 +1,7 @@
 import random
 
 NUMERO_ESCOLHIDO = random.randint(1, 100)
+print(NUMERO_ESCOLHIDO)
  
 print("ADIVINHE O NUMERO de 1 a 100")
 dificuldade = input("Qual dificuldade você quer FACIL ou DIFICIL? F / D: ")
@@ -32,6 +33,7 @@ while tentativas > 0:
         break
 
     tentativas -= 1
+
 
 
 

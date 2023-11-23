@@ -14,22 +14,38 @@ def adversario_dois():
     return str(adv['nome']), str(adv['seguidores'])
 
 
-def compara(insta_um, insta_dois):
+def compara(insta_um, insta_dois):    
+        if insta_um[1] > insta_dois[1]:
+            return insta_um
+        else:
+            return insta_dois
+  
 
-    if insta_um > insta_dois:
-        return insta_um
-    else:
-        return insta_dois
     
-tentativas = 3
 
-while tentativas <= 3:  
-    um = adversario_um()
-    dois = adversario_dois()
-    resultado = compara(um, dois)
+def run():
+    tentativas = 3
+    while tentativas > 0:  
+        print(tentativas)
+        um = adversario_um()
+        dois = adversario_dois()
+        resultado = compara(um, dois)
+    
+        print(um[0])    
+        print(dois[0])
+        esc = input('Quem tem mais seguidor ? 1 ou 2 ')
+        if esc == '1':
+            esc = um
+        else:
+            esc = dois     
 
-    print(' '.join(um))    
-    print(' '. join(dois))
-    input('Quem tem mais seguidor ? ')
-    print(f'Quem tem mais seguidor é: {resultado[0]} com {float(resultado[1])} seguidores\n')
-    tentativas =- 1
+        if esc == resultado:
+            print('Acertou\n')
+        else:
+            
+            print(f'Quem tem mais seguidor é: {resultado[0]} com {float(resultado[1])} seguidores\n')    
+            tentativas = tentativas - 1
+
+
+
+run()

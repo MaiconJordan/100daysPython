@@ -33,7 +33,7 @@ def run():
     
         print(um[0])    
         print(dois[0])
-        esc = input('Quem tem mais seguidor ? 1 ou 2 ')
+        esc = input('Quem tem mais seguidor ? 1 ou 2 ')        
         if esc == '1':
             esc = um
         else:
@@ -42,7 +42,7 @@ def run():
         if esc == resultado:
             print('Acertou\n')
         else:
-            
+            print("Voce ERROU")
             print(f'Quem tem mais seguidor é: {resultado[0]} com {float(resultado[1])} seguidores\n')    
             tentativas = tentativas - 1
 

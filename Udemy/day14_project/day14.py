@@ -26,13 +26,13 @@ def compara(insta_um, insta_dois):
 def run():
     tentativas = 3
     while tentativas > 0:  
-        print(tentativas)
+        print('Tentativas: ',tentativas)
         um = adversario_um()
         dois = adversario_dois()
         resultado = compara(um, dois)
     
-        print(um[0])    
-        print(dois[0])
+        print(um[0], 'VS' , dois[0])    
+        
         esc = input('Quem tem mais seguidor ? 1 ou 2 ')        
         if esc == '1':
             esc = um

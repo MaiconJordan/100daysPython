@@ -1,0 +1,48 @@
+Requisitos do Programa da Máquina de Café
+
+    1 - Solicitar ao usuário perguntando: "O que você gostaria? (espresso/latte/cappuccino):"
+        a. Verificar a entrada do usuário para decidir o que fazer em seguida.
+        b. A solicitação deve ser exibida toda vez que uma ação for concluída, por exemplo, uma vez que a bebida for dispensada. A solicitação deve ser exibida novamente para atender ao próximo cliente.
+    2 - Desligar a Máquina de Café digitando "off" na solicitação.
+        a. Para os mantenedores da máquina de café, eles podem usar "off" como a palavra secreta para desligar a máquina. Seu código deve encerrar a execução quando isso acontecer.
+
+    3 -Imprimir relatório.
+        a. Quando o usuário digitar "report" na solicitação, um relatório deve ser gerado mostrando os valores atuais dos recursos. Por exemplo:
+        Água: 100ml
+        Leite: 50ml
+        Café: 76g
+        Dinheiro: $2,5
+
+    4 - Verificar recursos suficientes?
+        a. Quando o usuário escolhe uma bebida, o programa deve verificar se há recursos suficientes para fazer essa bebida.
+        b. Por exemplo, se o Latte requer 200ml de água, mas só há 100ml na máquina, não deve continuar a fazer a bebida, mas imprimir: "Desculpe, não há água suficiente."
+        c. O mesmo deve acontecer se outro recurso estiver esgotado, como leite ou café.
+
+    5 - Processar moedas.
+        a. Se houver recursos suficientes para fazer a bebida selecionada, o programa deve solicitar ao usuário que insira moedas.
+        b. Lembre-se de que quarters = $0,25, dimes = $0,10, nickels = $0,05, pennies = $0,01
+        c. Calcular o valor monetário das moedas inseridas. Por exemplo, 1 quarter, 2 dimes, 1 nickel, 2 pennies = 0,25 + 0,1 x 2 + 0,05 + 0,01 x 2 = $0,52
+
+    6 - Verificar transação bem-sucedida?
+        a. Verificar se o usuário inseriu dinheiro suficiente para comprar a bebida selecionada. Por exemplo, Latte custa $2,50, mas eles só inseriram $0,52, então, após contar as moedas, o programa deve dizer "Desculpe, não é dinheiro suficiente. Dinheiro devolvido.".
+        b. Mas se o usuário inseriu dinheiro suficiente, então o custo da bebida é adicionado à máquina como lucro e isso será refletido na próxima vez que "report" for acionado. Por exemplo:
+        Água: 100ml
+        Leite: 50ml
+        Café: 76g
+        Dinheiro: $2,5
+        c. Se o usuário inseriu dinheiro demais, a máquina deve oferecer troco. Por exemplo, "Aqui estão $2,45 de troco." O troco deve ser arredondado para 2 casas decimais.
+
+    7 - Fazer café.
+        a. Se a transação for bem-sucedida e houver recursos suficientes para fazer a bebida escolhida pelo usuário, então os ingredientes para fazer a bebida devem ser deduzidos dos recursos da máquina de café.
+        Por exemplo, relatório antes da compra do latte:
+        Água: 300ml
+        Leite: 200ml
+        Café: 100g
+        Dinheiro: $0
+        Relatório após a compra do latte:
+        Água: 100ml
+        Leite: 50ml
+        Café: 76g
+        Dinheiro: $2,5
+        b. Depois que todos os recursos forem deduzidos, informar ao usuário "Aqui está o seu latte. Aproveite!". Se o latte foi a escolha deles.
+

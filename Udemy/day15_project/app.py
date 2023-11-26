@@ -20,8 +20,8 @@ def verificar_recurso(tipo_cafe):
         if agua >= 50 and cafe >= 18:
             agua -= 50            
             cafe -= 18
-            processar_moedas()
-            return  True
+            processar_moedas(tipo_cafe)
+            return  True, tipo_cafe
         else:
             return False
     if tipo_cafe == 'latte':
@@ -43,8 +43,9 @@ def verificar_recurso(tipo_cafe):
      
     
 
-def processar_moedas():
+def processar_moedas(tipo_cafe):
     global saldo   
+    cafe = tipo_cafe
 
     
     print("Insira as moedas por favor")
@@ -52,12 +53,26 @@ def processar_moedas():
     ciquenta = input("Quantas moedas de R$0.50: ")        
     vinte_cinco = input("Quantas moedas de R$25: ")
 
-    total_moedas = float(um) * 1 + float(ciquenta) * 0.50 + float(vinte_cinco) * 0.25
-    saldo = total_moedas
+    total_moedas = float(um) * 1 + float(ciquenta) * 0.50 + float(vinte_cinco) * 0.25    
+    processar_pagamento(total_moedas, cafe)
+
     return total_moedas 
 
-def processar_pagamento():
-    pass
+def processar_pagamento(pagamento, tipo_cafe):
+    global saldo
+    if tipo_cafe == 'espresso':
+        if pagamento > 1.50:
+            print("Fazendo cafe")
+            troco = pagamento - 1.5
+            print(f"Seu troco: {troco}")
+            saldo = 1.5
+        elif pagamento == 1.50:
+            print("Fazendo cafe")
+            saldo = 1.5
+        else:
+            print("Saldo insuficiente")
+
+
 
 
 def fazer_cafe():

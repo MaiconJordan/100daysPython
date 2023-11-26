@@ -5,7 +5,7 @@ cafe = 100
 saldo = 0
 
 
-def recurso_atual():
+def relatorio():
     print(f"Água: {agua}ml\nLeite: {leite}ml\n Café: {cafe}g\n Saldo: ${saldo}")
 
 
@@ -14,9 +14,13 @@ def verificar_recurso(tipo_cafe):
     global leite 
     global cafe 
     global saldo 
+
     print(tipo_cafe)
     if tipo_cafe == 'espresso': 
         if agua >= 50 and cafe >= 18:
+            agua -= 50            
+            cafe -= 18
+            processar_moedas()
             return  True
         else:
             return False
@@ -30,16 +34,27 @@ def verificar_recurso(tipo_cafe):
             return False
     if tipo_cafe == 'capuccino':
         if agua >= 250 and leite >= 100 and cafe >= 24:
+            agua -= 250            
+            cafe -= 24
+            leite -= 100
             return  True
         else:
-            return False
-        
-def latte():
-    agua = agua - 100        
+            return False 
+     
     
 
 def processar_moedas():
-    pass
+    global saldo   
+
+    
+    print("Insira as moedas por favor")
+    um = input("Quantas moedas de R$ 1.00: ")
+    ciquenta = input("Quantas moedas de R$0.50: ")        
+    vinte_cinco = input("Quantas moedas de R$25: ")
+
+    total_moedas = float(um) * 1 + float(ciquenta) * 0.50 + float(vinte_cinco) * 0.25
+    saldo = total_moedas
+    return total_moedas 
 
 def processar_pagamento():
     pass
@@ -57,9 +72,10 @@ while on_off != True:
         break
 
     if solicitacao == 'relatorio':
-        recurso_atual()
+        relatorio()
     else:
         verificar_recurso(solicitacao)
+        
 
     
     

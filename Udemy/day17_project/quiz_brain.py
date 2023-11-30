@@ -3,6 +3,11 @@ class QuizBrain:
         self. question_number = 0
         self.question_list = q_list
 
+    def still_has_questions(self):
+       if self.question_number < len(self.question_list):
+          return True
+       else:
+          return False
     
     def next_question(self):        
       for i in range(len(self.question_list)):  
